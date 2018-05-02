@@ -1,0 +1,22 @@
+{
+  "name": "guildtheme",
+  "version": "1.0.0",
+  "description": "Guild Theme for Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mozzey/guildTheme.git"
+  },
+  "author": "Michael Cacciano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mozzey/guildTheme/issues"
+  },
+  "homepage": "https://github.com/Mozzey/guildTheme#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
