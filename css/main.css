@@ -48,6 +48,7 @@ body {
     grid-column-gap: 1.5rem;
     align-items: center;
     font-size: 1.6rem;
+    font-weight: 300;
     color: #aaa; }
     .header__poweredby-text::before, .header__poweredby-text::after {
       content: "";
@@ -134,15 +135,15 @@ body {
     transform: translateY(-1rem);
     opacity: .9; }
   .feature--1 {
-    background-image: url(../img/feature1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/feature1.jpg);
     background-size: cover;
     background-position: center; }
   .feature--2 {
-    background-image: url(../img/feature2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/feature2.jpg);
     background-size: cover;
     background-position: center; }
   .feature--3 {
-    background-image: url(../img/feature3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/feature3.jpg);
     background-size: cover;
     background-position: center; }
   .feature__title {
@@ -154,5 +155,4 @@ body {
     .feature__postDate span {
       font-size: .8rem;
       padding: .2rem;
-      text-align: center;
       border: 1px solid #fff; }
