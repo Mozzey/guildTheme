@@ -16,7 +16,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end feature-start] 20vw [feature-end article-start] 40rem [article-end];
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end] repeat(5, max-content);
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end]; }
 
 .header {
@@ -113,5 +113,11 @@ body {
   grid-column: 8 / 10; }
 
 .features {
-  background-color: aquamarine;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem; }
+
+.feature {
+  background-color: steelblue; }
