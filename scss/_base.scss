@@ -1,0 +1,27 @@
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+  color: $color-grey-light-2;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end feature-start] 20vw [feature-end article-start] 40rem [article-end];
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end];
+}

@@ -1,0 +1,44 @@
+.navbar {
+  background: rgba(0,0,0, .8);
+  font-size: 1.6rem;
+  grid-row: nav-start / nav-end;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__logo {
+    padding-left: 5rem;
+    grid-column: 1 / span 2;
+    text-transform: uppercase;
+    align-self: center;
+  }
+}
+
+.nav {
+  list-style: none;
+  grid-column: 6 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+
+  &__link,
+  &__visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+    display: block;
+    transition: all .2s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: rgba(#fff, .1);
+    transform: translateY(-.5rem);
+  }
+}

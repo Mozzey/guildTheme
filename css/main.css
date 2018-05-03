@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+body {
+  color: #aaa;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end feature-start] 20vw [feature-end article-start] 40rem [article-end];
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end]; }
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/wowheader.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  grid-row: 1 / header-end;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  align-content: center;
+  justify-content: center; }
+  .header::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    /*positions with reference to div*/
+    top: 100%;
+    left: 50%; }
+  .header__title {
+    font-size: 7.5rem;
+    color: #fff;
+    grid-row: 3 / 4; }
+  .header__poweredby-text {
+    grid-row: 5 / 6;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #aaa; }
+    .header__poweredby-text::before, .header__poweredby-text::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
+  .header__sponsors {
+    grid-row: 6 / 7;
+    justify-self: center; }
+    .header__sponsors img {
+      max-height: 6.5rem;
+      max-width: 100%; }
+
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 1.6rem;
+  grid-row: nav-start / nav-end;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000; }
+  .navbar__logo {
+    padding-left: 5rem;
+    grid-column: 1 / span 2;
+    text-transform: uppercase;
+    align-self: center; }
+
+.nav {
+  list-style: none;
+  grid-column: 6 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center; }
+  .nav__link, .nav__visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+    display: block;
+    transition: all .2s; }
+  .nav__link:hover, .nav__link:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-0.5rem); }
+
+.footer {
+  background-color: olivedrab;
+  grid-column: full-start / full-end; }
+
+.article {
+  background-color: green;
+  grid-column: center-start / center-end; }
+
+.blog {
+  background-color: coral;
+  grid-column: 2 / 7; }
+
+.sidebar {
+  background-color: orangered;
+  grid-column: 8 / 10; }
+
+.features {
+  background-color: aquamarine;
+  grid-column: center-start / center-end; }
