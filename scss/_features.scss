@@ -1,6 +1,7 @@
 .features {
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
@@ -29,19 +30,19 @@
   }
 
   &--1 {
-    background-image: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url(../img/feature1.jpg);
+    background-image: linear-gradient(rgba(#000, .4), rgba(#000, .4)), url(../img/feature1.jpg);
     background-size: cover;
     background-position: center;
   }
 
   &--2 {
-    background-image: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url(../img/feature2.jpg);
+    background-image: linear-gradient(rgba(#000, .4), rgba(#000, .4)), url(../img/feature2.jpg);
     background-size: cover;
     background-position: center;    
   }
 
   &--3 {
-    background-image: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url(../img/feature3.jpg);
+    background-image: linear-gradient(rgba(#000, .4), rgba(#000, .4)), url(../img/feature3.jpg);
     background-size: cover;
     background-position: center;
   }

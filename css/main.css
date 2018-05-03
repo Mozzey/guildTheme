@@ -20,7 +20,7 @@ body {
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end]; }
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/wowheader.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.65)), url(../img/wowheader.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -101,8 +101,40 @@ body {
   grid-column: full-start / full-end; }
 
 .article {
-  background-color: green;
-  grid-column: center-start / center-end; }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/article3.jpg);
+  background-size: cover;
+  background-repeat: center;
+  margin-bottom: 10rem;
+  height: 35vw;
+  grid-column: center-start / center-end;
+  box-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-rows: max-content min-content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+  padding: 3rem 0 3rem 6rem;
+  align-content: end; }
+  .article__link:link, .article__link:visited {
+    grid-column: 1 / span 2;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s; }
+  .article__link:hover, .article__link:active {
+    transform: translateY(2rem);
+    opacity: .7; }
+  .article__title {
+    font-size: 5rem;
+    letter-spacing: .3rem; }
+  .article__postDate {
+    font-size: 1.2rem;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem; }
+    .article__postDate span {
+      font-size: .8rem;
+      padding: .2rem;
+      border: 1px solid #fff; }
+  .article__excerpt {
+    font-size: 2rem; }
 
 .blog {
   background-color: coral;
@@ -114,7 +146,8 @@ body {
 
 .features {
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem; }
@@ -135,15 +168,15 @@ body {
     transform: translateY(-1rem);
     opacity: .9; }
   .feature--1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/feature1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature1.jpg);
     background-size: cover;
     background-position: center; }
   .feature--2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/feature2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature2.jpg);
     background-size: cover;
     background-position: center; }
   .feature--3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/feature3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature3.jpg);
     background-size: cover;
     background-position: center; }
   .feature__title {

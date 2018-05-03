@@ -1,4 +1,50 @@
 .article {
-  background-color: green;
+  background-image: linear-gradient(rgba(#000, .2), rgba(#000, .2)), url(../img/article3.jpg);
+  background-size: cover;
+  background-repeat: center;
+  margin-bottom: 10rem;
+  height: 35vw;
   grid-column: center-start / center-end;
+  box-shadow:  .5rem 1rem 5rem rgba(#000, .6); 
+  display: grid;
+  grid-template-rows: max-content min-content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+  padding: 3rem 0 3rem 6rem;
+  align-content: end;
+
+  &__link:link,
+  &__link:visited {
+    grid-column: 1 / span 2;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    transform: translateY(2rem);
+    opacity: .7;
+  }
+  
+  &__title {
+    font-size: 5rem;
+    letter-spacing: .3rem;
+  }
+
+  &__postDate {
+    font-size: 1.2rem;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem;
+
+    span {
+      font-size: .8rem;
+      padding: .2rem;
+      border: 1px solid #fff;
+    }
+  }
+
+  &__excerpt {
+    font-size: 2rem;
+  }
 }
