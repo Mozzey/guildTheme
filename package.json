@@ -4,7 +4,7 @@
   "description": "Guild Theme for Client",
   "main": "index.js",
   "scripts": {
-    "watch-sass": "node-sass scss/main.scss css/main.css -w"
+    "watch:sass": "node-sass scss/main.scss css/main.css -w"
   },
   "repository": {
     "type": "git",

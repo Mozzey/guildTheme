@@ -5,7 +5,7 @@
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  font-weight: bold;
+  // font-weight: bold;
   position: sticky;
   top: 0;
   z-index: 1000;
