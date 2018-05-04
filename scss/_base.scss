@@ -22,6 +22,6 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end] repeat(10, max-content);
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end];
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end];
 }

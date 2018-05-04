@@ -16,7 +16,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end] repeat(10, max-content);
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 95vh [header-end];
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end]; }
 
 .header {
@@ -192,9 +192,55 @@ body {
   .article__excerpt {
     font-size: 2rem; }
 
-.blog {
-  background-color: coral;
+.blogs {
   grid-column: 2 / 7; }
+
+.blog {
+  margin-bottom: 5rem;
+  height: 20vw;
+  font-weight: 300;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  align-content: end;
+  padding: 3rem 1.5rem;
+  box-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.6); }
+  .blog__link:link, .blog__link:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s; }
+  .blog__link:hover, .blog__link:active {
+    transform: translateY(-1rem);
+    opacity: .9; }
+  .blog--1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature1.jpg);
+    background-size: cover;
+    background-position: center; }
+  .blog--2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature2.jpg);
+    background-size: cover;
+    background-position: center; }
+  .blog--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature3.jpg);
+    background-size: cover;
+    background-position: center; }
+  .blog--4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature1.jpg);
+    background-size: cover;
+    background-position: center; }
+  .blog--5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/feature2.jpg);
+    background-size: cover;
+    background-position: center; }
+  .blog__title {
+    font-size: 3rem;
+    letter-spacing: .3rem; }
+  .blog__postDate {
+    font-size: 1.2rem;
+    letter-spacing: .3rem; }
+    .blog__postDate span {
+      font-size: .8rem;
+      padding: .2rem;
+      border: 1px solid #fff; }
 
 .sidebar {
   background-color: orangered;
