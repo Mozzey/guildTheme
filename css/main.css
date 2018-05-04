@@ -84,7 +84,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center; }
-  .nav__link, .nav__visited {
+  .nav__link:link, .nav__link:visited {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -101,21 +101,21 @@ body {
   color: #fff;
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: min-content repeat(6, 1fr); }
-  .footer__logo {
-    grid-column: 1 / span 4;
+  grid-template-columns: max-content min-content; }
+  .footer .logo {
     padding-left: 3rem;
+    grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     text-transform: uppercase;
     align-items: center;
     justify-items: center; }
-    .footer__logo-title {
+    .footer .logo__title {
       grid-column: 1 / span 2;
       grid-row: 1 / 2;
       font-size: 5rem; }
-    .footer__logo-poweredby-text {
+    .footer .logo__poweredby-text {
       grid-column: 1 / span 2;
       grid-row: 2 / 3;
       width: 100%;
@@ -126,17 +126,35 @@ body {
       font-size: 1rem;
       font-weight: 300;
       color: #aaa; }
-      .footer__logo-poweredby-text::before, .footer__logo-poweredby-text::after {
+      .footer .logo__poweredby-text::before, .footer .logo__poweredby-text::after {
         content: "";
         height: 1px;
         display: block;
         background-color: currentColor; }
-    .footer__logo-sponsors {
+    .footer .logo__sponsors {
       grid-column: 1 / span 2;
       grid-row: 3 / -1; }
-      .footer__logo-sponsors img {
+      .footer .logo__sponsors img {
         max-height: 6.5rem;
         max-width: 100%; }
+  .footer .nav {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center; }
+    .footer .nav__link:link, .footer .nav__link:visited {
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 2rem;
+      display: block;
+      transition: all .2s; }
+    .footer .nav__link:hover, .footer .nav__link:active {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-0.5rem); }
 
 .article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/article3.jpg);

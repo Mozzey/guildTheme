@@ -25,8 +25,8 @@
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
 
-  &__link,
-  &__visited {
+  &__link:link,
+  &__link:visited {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
