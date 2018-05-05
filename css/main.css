@@ -101,12 +101,11 @@ body {
   color: #fff;
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: max-content min-content; }
+  grid-template-columns: repeat(2, minmax(min-content, max-content)); }
   .footer .logo {
     padding-left: 3rem;
     grid-column: 1 / 2;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     text-transform: uppercase;
     align-items: center;
@@ -135,7 +134,7 @@ body {
       grid-column: 1 / span 2;
       grid-row: 3 / -1; }
       .footer .logo__sponsors img {
-        max-height: 6.5rem;
+        max-height: 5rem;
         max-width: 100%; }
   .footer .nav {
     list-style: none;
